@@ -1,13 +1,14 @@
 import './lib/lib';
 import $ from './lib/lib';
 
-$('button').onClick(function() {
-    $('div').eq(2).toggleClass('active');
+$('#first').on('click', () => {
+    $('div').eq(1).fadeOut(800);
 });
 
-$('div').onClick(function() {
-    console.log($(this).index());
+$('[data-count="second"]').on('click', () => {
+    $('div').eq(2).fadeOut(800);
 });
 
-// console.log($('div').eq(2).find('.some'));
-$('button').fadeOut(1800);
+$('button').eq(2).onClick(() => {
+    $('.w-500').fadeOut(800);
+});

@@ -2,7 +2,7 @@ import './lib/lib';
 import $ from './lib/lib';
 
 $('#first').on('click', () => {
-    $('div').eq(1).fadeOut(800);
+    $('div').eq(1).fadeIn(800);
 });
 
 $('[data-count="second"]').on('click', () => {
@@ -10,5 +10,5 @@ $('[data-count="second"]').on('click', () => {
 });
 
 $('button').eq(2).onClick(() => {
-    $('.w-500').fadeOut(800);
+    $('.w-500').fadeToggle(800);
 });
